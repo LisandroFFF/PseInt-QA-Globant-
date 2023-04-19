@@ -1,0 +1,28 @@
+Algoritmo lista_companero
+	Definir cantidadEmails,solicitudesEjecutivos Como Entero
+	Definir solicitudesEmegercia Como Logico
+	cantidadEmails <- 6
+	solicitudesEjecutivos <- 3
+	solicitudesEmegercia <- falso
+	Escribir 'Iniciando sesion'
+	Escribir 'Completando la hoja calculo de ingresos mensuales'
+	Escribir 'Revisando los correos electronicos'
+	// Si hay menos de 10 correos sin leer revisar correo de voz
+	
+	Si cantidadEmails<10 Entonces
+		Escribir 'Revisando correo de voz para ver si hay solicitud de ejecutivos'
+		Si solicitudesEjecutivos>0 Entonces
+			// Hacer las solicitudes a menos que haya algunas de emergencia
+			Si solicitudesEmegercia Entonces
+				Escribir 'Haciendo las soliciudes de emergencia'
+			FinSi
+			Escribir 'Haciendo la solicitud de los Ejecutivos'
+		FinSi
+		// Despues de las solicitudes y enviar correo electronico
+		Escribir 'Mandando el mail de actualizacion'
+	FinSi
+	// Una vez que hayas terminado con la solicitud de cumplimiento, riegue la planta de mi escritorio después de apagar la computadora.
+	Escribir 'Termine la solicitud de cumplimiento'
+	Escribir 'Apagando la computadora'
+	Escribir 'Regando las plantas'
+FinAlgoritmo

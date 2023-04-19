@@ -1,0 +1,63 @@
+Algoritmo ej_3
+	//1
+	Definir sueldoMinimo, sueldoActual Como Real
+	Escribir "ingrese sueldo actual"
+	leer sueldoActual
+	Escribir "ingrese sueldo minimo"
+	leer sueldoMinimo
+	si	sueldoActual>=sueldoMinimo
+		Escribir "su sueldo actual es mayor al minimo"
+	SiNo
+		Escribir "su sueldo actual es menor al minimo"
+	FinSi
+	
+	//2
+	Definir num Como Real
+	
+	Escribir "Por favor, ingrese un numero: "
+	Leer num
+	
+	Si num > 500 Entonces
+		Escribir (num * 0.18)
+	FinSi
+	
+	//3
+	definir letra Como Caracter
+	Escribir "ingrese letra en minuscula"
+	leer letra
+	
+	si letra == "a" o letra == "e" o letra == "i" o letra == "o" o letra == "u" Entonces
+		Escribir "es vocal"
+	sino 
+		Escribir "es consonante"
+		
+	FinSi
+	
+	//4
+	Definir num, cifra1,cifra2 Como Entero
+	Escribir "ingrese numero de 3 cifras"
+	Leer num
+	cifra1<- trunc(num/100)
+	cifra2<- (num mod 10) 
+	
+	si cifra1==cifra2 Entonces
+		Escribir "es capicua"
+	SiNo
+		Escribir "no es capicua"
+		
+	FinSi
+	
+	//5
+	Definir dia Como Caracter
+	Escribir "ingrese un dia"
+	leer dia
+	
+	si dia == "lunes" o dia=="martes" o dia=="miercoles" o dia=="jueves" o dia=="viernes" Entonces
+		Escribir "es dia de la semana"
+	sino 
+		escribir "es finde ja jode"
+		
+	FinSi
+	
+	//escribir lo mismo pero con sabado o domingo
+FinAlgoritmo
