@@ -1,0 +1,28 @@
+//Rellenar una matriz, de 3 x 3, con una palabra de 9 de longitud, pedida por el usuario,
+//encontrando la manera de que la frase se muestre de manera continua en la matriz.
+//Por ejemplo, si tenemos la palabra habilidad, nuestra matriz se debería ver así:
+//Nota: recordar el uso de la función Subcadena().
+
+Algoritmo cinco
+	Definir i,j,contador Como Numero
+	Definir matriz,palabraUsuario Como Cadena
+	
+	Dimension matriz(3,3)
+	
+	Escribir "Por favor, ingrese una palabra: "
+	Leer palabraUsuario
+	contador=0
+	
+	Para i = 0 Hasta 2
+		Para j = 0 Hasta 2
+			matriz(i,j)=Subcadena(palabraUsuario,contador,contador)
+			Escribir Sin Saltar matriz(i,j) " "
+			contador=contador+1
+		FinPara
+		Escribir ""
+	FinPara
+
+
+
+	
+FinAlgoritmo
