@@ -24,8 +24,12 @@ Algoritmo seis
 	
 	llenarMatriz(matriz,tamanoMatriz)
 	mostrarMatriz(matriz,tamanoMatriz)
-	matrizTranspuesta = transponerMatriz(matriz,tamanoMatriz)
-	evaluarMatriz(matrizTranspuesta,tamanoMatriz)
+	Dimension matrizTranspuesta(tamanoMatriz,tamanoMatriz)
+	transponerMatriz(matriz,tamanoMatriz,matrizTranspuesta)
+	
+	evaluarMatriz(matriz,tamanoMatriz)
+	evaluarMatrizTranspuesta(matrizTranspuesta,tamanoMatriz)
+	
 	
 FinAlgoritmo
 
@@ -43,15 +47,13 @@ SubProceso llenarMatriz(matriz,tamanoMatriz)
 	FinPara
 FinSubProceso
 
-Funcion transpuesta = transponerMatriz(matriz,tamanoMatriz)
-	Definir transpuesta Como Numero
+SubProceso transponerMatriz(matriz,tamanoMatriz,matrizTranspuesta)
 	Definir i,j Como Numero
 	
-	Dimension transpuesta(tamanoMatriz,tamanoMatriz)
-	
+
 	Para i = 0 Hasta tamanoMatriz-1
 		Para j = 0 Hasta tamanoMatriz-1
-			transpuesta(i,j) = matriz(j,i)
+			matrizTranspuesta(i,j) = matriz(j,i)
 		FinPara
 	FinPara
 	
@@ -61,7 +63,7 @@ Funcion transpuesta = transponerMatriz(matriz,tamanoMatriz)
 	Escribir ""
 	Para i = 0 Hasta tamanoMatriz-1
 		Para j = 0 Hasta tamanoMatriz-1
-			Escribir Sin Saltar transpuesta(i,j) "  "
+			Escribir Sin Saltar matrizTranspuesta(i,j) "  "
 		FinPara
 		Escribir ""
 	FinPara
@@ -105,6 +107,34 @@ SubProceso evaluarMatriz(matriz,tamanoMatriz)
 	Escribir auxiliarDos
 	auxiliarDos = auxiliar
 	auxiliar = 0
+	FinPara
+	
+	Escribir check
+	
+FinSubProceso
+
+SubProceso evaluarMatrizTranspuesta(matrizTranspuesta,tamanoMatriz)
+	Definir i,j,auxiliar,auxiliarDos como Numero
+	Definir check Como Logico
+	
+	check = Verdadero
+	auxiliar = 0
+	auxiliarDos = 0
+	
+	Para i = 0 Hasta tamanoMatriz-1
+		Para j = 0 Hasta tamanoMatriz-1
+			auxiliar = auxiliar + matrizTranspuesta(i,j)
+		FinPara
+		Si i== 0 Entonces
+			auxiliarDos = auxiliar
+		FinSi
+		Si auxiliar <> auxiliarDos Entonces
+			check = Falso
+		FinSi
+		Escribir auxiliar
+		Escribir auxiliarDos
+		auxiliarDos = auxiliar
+		auxiliar = 0
 	FinPara
 	
 	Escribir check
